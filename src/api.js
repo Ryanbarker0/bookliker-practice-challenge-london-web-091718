@@ -1,6 +1,7 @@
-const getBooks = () =>
-    fetch("http://localhost:3000/books")
-        .then(resp => resp.json())
+const getBooks = async () => {
+    const response = await fetch("http://localhost:3000/books")
+    return response.json()
+}
 
 const getBook = id =>
     fetch(`http://localhost:3000/books/${id}`)
